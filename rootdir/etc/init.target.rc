@@ -192,6 +192,9 @@ on post-fs-data
 on boot
     start rmt_storage
 
+    chmod 0666 /dev/nq-nci
+    chown nfc nfc /dev/nq-nci
+
 on property:sys.boot_completed=1
     setprop sys.io.scheduler "bfq"
 
