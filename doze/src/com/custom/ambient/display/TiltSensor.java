@@ -1,9 +1,5 @@
 /*
  * Copyright (c) 2015 The CyanogenMod Project
-<<<<<<< HEAD:doze/src/org/lineageos/settings/doze/TiltSensor.java
- *               2017-2018 The LineageOS Project
-=======
->>>>>>> 662ffc9... Remove lineage dependencies from Xiaomi Doze package.:doze/src/com/custom/ambient/display/TiltSensor.java
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,12 +45,8 @@ public class TiltSensor implements SensorEventListener {
 
     public TiltSensor(Context context) {
         mContext = context;
-<<<<<<< HEAD:doze/src/org/lineageos/settings/doze/TiltSensor.java
-        mSensorManager = mContext.getSystemService(SensorManager.class);
-=======
         mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
         mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
->>>>>>> 662ffc9... Remove lineage dependencies from Xiaomi Doze package.:doze/src/com/custom/ambient/display/TiltSensor.java
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_TILT_DETECTOR);
         mSensorWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
                 "SensorWakeLock");
@@ -93,3 +85,4 @@ public class TiltSensor implements SensorEventListener {
         mSensorManager.unregisterListener(this, mSensor);
     }
 }
+

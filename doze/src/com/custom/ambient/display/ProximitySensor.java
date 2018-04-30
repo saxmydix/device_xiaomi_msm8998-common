@@ -1,9 +1,5 @@
 /*
  * Copyright (c) 2015 The CyanogenMod Project
-<<<<<<< HEAD:doze/src/org/lineageos/settings/doze/ProximitySensor.java
- *               2017-2018 The LineageOS Project
-=======
->>>>>>> 662ffc9... Remove lineage dependencies from Xiaomi Doze package.:doze/src/com/custom/ambient/display/ProximitySensor.java
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,14 +42,9 @@ public class ProximitySensor implements SensorEventListener {
 
     public ProximitySensor(Context context) {
         mContext = context;
-<<<<<<< HEAD:doze/src/org/lineageos/settings/doze/ProximitySensor.java
-        mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY, false);
-=======
         mSensorManager = (SensorManager)
                 mContext.getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
->>>>>>> 662ffc9... Remove lineage dependencies from Xiaomi Doze package.:doze/src/com/custom/ambient/display/ProximitySensor.java
     }
 
     @Override
@@ -101,3 +92,4 @@ public class ProximitySensor implements SensorEventListener {
         mSensorManager.unregisterListener(this, mSensor);
     }
 }
+
